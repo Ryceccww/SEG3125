@@ -1,0 +1,27 @@
+.background{
+    background-color: antiquewhite;
+
+    margin: 0 auto;
+}
+.setFooter{
+    font-style: italic ;
+    font-size: medium;
+    color: blueviolet;
+    float: right;
+
+}
+.likert{
+    float: left;
+    list-style-type: none;
+}
+.question {
+    background-color: aliceblue;
+    color: black;
+    margin: 20px;
+    padding: 20px;
+}
+.myButton{
+    width: 200px;
+    height: 50px;
+    margin-left: 100px;
+}
