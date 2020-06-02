@@ -1,5 +1,5 @@
 .h1{
-    font-family: "Big Caslon";
+    font-family: Fantasy;
 }
 
 .tab {
@@ -36,7 +36,7 @@
     border-top: none;
 }
 .setFooter{
-    font-family: fantasy;
+    font-family: Arial;
     font-style: italic ;
     font-size: small;
     color: coral;
