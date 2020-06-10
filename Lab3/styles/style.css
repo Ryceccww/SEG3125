@@ -1,0 +1,74 @@
+.h1{
+    font-family: "Big Caslon";
+}
+
+/*.tab {*/
+/*    overflow: hidden;*/
+/*    border: 2px solid ;*/
+/*    background-color: cornflowerblue;*/
+
+/*}*/
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+
+.tab button:hover {
+    background-color: dodgerblue;
+}
+
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+.tabcontent {
+    font-family: Arial;
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+.setFooter{
+    font-family: Arial;
+    font-style: italic ;
+    font-size: small;
+    color: coral;
+    float: right;
+
+}
+.hide{
+    display: none;
+}
+.setButton{
+    background-color: coral;
+    margin-top: 10px;
+    color: aliceblue;
+
+}
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+.pagination a.active {
+    background-color: darkorange;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #cccccc;
+}

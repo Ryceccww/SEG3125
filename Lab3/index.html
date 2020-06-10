@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <title>Grocery store</title>
+</head>
+<body>
+<div class="h1">
+<h3>Welcome to Luigi Grocery Store Website!</h3>
+</div>
+<div class="pagination">
+    <a href="#">&laquo; </a>
+    <a href="#" class="tablinks" onclick="openInfo(event, 'Client')">Client</a>
+    <a href="#" class="tablinks" onclick="openInfo(event, 'Products')">Products</a>
+    <a href="#" class="tablinks" onclick="openInfo(event, 'Cart')">Cart</a>
+    <a href="#">&raquo;</a>
+
+<!--    <button class="tablinks" onclick="openInfo(event, 'Cart')">Client</button>-->
+<!--    <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>-->
+<!--    <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>-->
+</div>
+
+<!-- Tab content -->
+<div id="Client" class="tabcontent">
+    <h3>Client Information</h3>
+    <p>Tell us a bit about you.</p>
+    Choose your preference about the products you want to buy:
+<!--    <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">-->
+<!--        <option value=""></option>-->
+<!--        <option value="Vegetarian">Vegetarian</option>-->
+<!--        <option value="GlutenFree">GlutenFree</option>-->
+<!--        <option value="VegetarianOrganic">Vegetarian and Organic</option>-->
+<!--        <option value="GlutenFreeOrganic">GlutenFree and Organic</option>-->
+<!--        <option value="Organic">Organic</option>-->
+<!--        <option value="Both">Vegetarin and GlutenFree</option>-->
+<!--        <option value="All">Vegetarin and GlutenFree and Organic</option>-->
+<!--        <option value="None">None</option>-->
+<!--    </select>-->
+        <form>
+        <input type="radio" id="choose1" name="choose" value="Vegetarian">
+        <label for="choose1"> I am a vegetarian.</label><br>
+        <input type="radio" id="choose2" name="choose" value="GlutenFree">
+        <label for="choose2"> I eat food that is gluten free.</label><br>
+        <input type="radio" id="choose3" name="choose" value="VegetarianOrganic">
+        <label for="choose3"> I am a vegetarian and I prefer to buy organic food. </label><br>
+        <input type="radio" id="choose4" name="choose" value="GlutenFreeOrganic">
+        <label for="choose4"> I eat food that is gluten free and I prefer to buy organic food. </label><br>
+        <input type="radio" id="choose5" name="choose" value="Organic">
+        <label for="choose5"> I prefer to buy organic food.</label><br>
+        <input type="radio" id="choose6" name="choose" value="Both">
+        <label for="choose6"> I am a vegetarian and I eat food that is gluten free.</label><br>
+        <input type="radio" id="choose7" name="choose" value="All">
+        <label for="choose7"> I am a vegetarian and I eat food that is gluten free. ALso, I prefer to buy organic food.</label><br>
+        <input type="radio" id="choose8" name="choose" value="None">
+        <label for="choose8"> I do not have any preference.</label><br>
+        <form>
+            <button class="setButton" id="addChoice" type = "button" value = "Submit" class="block"
+                    onclick="populateListProductChoices('choose')"
+                    >Choose your preference</button>
+<!--    <button id="dietSelect" class="setButton" name="dietSelect" type="button" class="block"-->
+<!--            onclick="populateListProductChoices(this.id, 'displayProduct')">-->
+<!--        choose-->
+<!--    </button>-->
+</div>
+
+<div id="Products" class="tabcontent">
+    <h3>Your targeted products</h3>
+    <p>We preselected products based on your preference.</p>
+    Choose items to buy:
+    <br>
+
+
+<!--    <div class="tab">-->
+<!--        <button class="tablinks1" onclick="open(event, 'Vegetable')">Vegetable</button>-->
+<!--        <button class="tablinks1" onclick="open(event, 'Fruit')">Fruit</button>-->
+<!--        <button class="tablinks1" onclick="open(event, 'Meat')">Meat</button>-->
+<!--        <button class="tablinks1" onclick="open(event, 'Other')">Other</button>-->
+<!--    </div>-->
+<!--    <div id="Vegetable" class="tabcontent1">-->
+<!--        <div id="displayVegetable"></div>-->
+<!--    </div>-->
+<!--    <div id="Fruit" class="tabcontent1">-->
+<!--        <div id="displayFruit"></div>-->
+<!--    </div>-->
+<!--    <div id="Meat" class="tabcontent1">-->
+<!--        <div id="displayMeat"></div>-->
+
+<!--    </div>-->
+<!--    <div id="Other" class="tabcontent1">-->
+<!--        <div id="displayOther"></div>-->
+<!--    </div>-->
+<!--    <div id="displayVegetable"></div>-->
+<!--    <br>-->
+    <div id="displayProduct"></div>
+    <button id="addCart" class="setButton" type="button" class="block" onclick="selectedItems()">
+        Add selected items to cart.
+    </button>
+
+</div>
+
+<div id="Cart" class="tabcontent">
+    <h3>Cart</h3>
+    <p>Here are the products that you choose.</p>
+    <div id="displayCart"></div>
+</div>
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+<div class="setFooter">
+    <footer>
+        <p>Website designed by Wenwen Chen</p>
+        <p>Student Number: 300070021</p>
+    </footer>
+</div>
+
+
+</body>
+</html>
