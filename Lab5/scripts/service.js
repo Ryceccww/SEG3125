@@ -35,7 +35,7 @@ function validateCredit(txtCredit) {
 // Document of datepicker is here: https://api.jqueryui.com/datepicker/
 // The following code shows how to set specific dates to exclude, as well as Sundays (Day 0)
 // Make sure in your version that you associate Days to remove with Experts (e.g. John doesn't work Mondays)
-var unavailableDates = ["06/29/2020","07/07/2020","07/10/2020"]
+var unavailableDates = []
 const setDateFormat = "mm/dd/yy";
 
 function disableDates1(date) {
@@ -115,45 +115,88 @@ $(document).ready(function(){
     //     }
     // );
 
-    $(".radios").change(
-        function() {
-            var id = $("input[name='hairdresser']:checked").val();
-            if (id =="Kevin") {
-                $( "#dateInput" ).datepicker(
-                    {
-                        dateFormat: setDateFormat,
-                         // no calendar before June 1rst 2020
-                         minDate: new Date('06/01/2020'),
-                        maxDate: '+4M',
-                         // used to disable some dates
-                         beforeShowDay: $.datepicker.noWeekends,
-                         beforeShowDay: disableDates1
-                     });
-            }if (id=="Andy"){
-                $( "#dateInput" ).datepicker(
-                    {
-                        dateFormat: setDateFormat,
-                        // no calendar before June 1rst 2020
-                        minDate: new Date('06/01/2020'),
-                        maxDate: '+4M',
-                        // used to disable some dates
-                        beforeShowDay: $.datepicker.noWeekends,
-                        beforeShowDay: disableDates2
-                    })
-            }
-            else if (id=="Jules"){
-                $( "#dateInput" ).datepicker(
-                    {
-                        dateFormat: setDateFormat,
-                        // no calendar before June 1rst 2020
-                        minDate: new Date('06/01/2020'),
-                        maxDate: '+4M',
-                        // used to disable some dates
-                        beforeShowDay: $.datepicker.noWeekends,
-                        beforeShowDay: disableDates3
-                    })
-            }
-        });
+    $('input[type=radio][name=hairdresser]').change(function() {
+        if(this.value=="Kevin"){
+            $( "#dateInput" ).datepicker(
+                {
+                    dateFormat: setDateFormat,
+                    // no calendar before June 1rst 2020
+                    minDate: new Date('06/01/2020'),
+                    maxDate: '+4M',
+                    // used to disable some dates
+                    beforeShowDay: $.datepicker.noWeekends,
+                    beforeShowDay: disableDates1
+                });
+
+        }
+        if(this.value=="Andy"){
+            $( "#dateInput" ).datepicker(
+                {
+                    dateFormat: setDateFormat,
+                    // no calendar before June 1rst 2020
+                    minDate: new Date('06/01/2020'),
+                    maxDate: '+4M',
+                    // used to disable some dates
+                    beforeShowDay: $.datepicker.noWeekends,
+                    beforeShowDay: disableDates2
+                });
+
+        }
+        if(this.value=="Jules"){
+            $( "#dateInput" ).datepicker(
+                {
+                    dateFormat: setDateFormat,
+                    // no calendar before June 1rst 2020
+                    minDate: new Date('06/01/2020'),
+                    maxDate: '+4M',
+                    // used to disable some dates
+                    beforeShowDay: $.datepicker.noWeekends,
+                    beforeShowDay: disableDates3
+                });
+
+        }
+
+    });
+
+    // $(".radios").change(
+    //     function() {
+    //         var id = $("input[name='hairdresser']:checked").val();
+    //         if (id =="Kevin") {
+    //             $( "#dateInput" ).datepicker(
+    //                 {
+    //                     dateFormat: setDateFormat,
+    //                      // no calendar before June 1rst 2020
+    //                      minDate: new Date('06/01/2020'),
+    //                     maxDate: '+4M',
+    //                      // used to disable some dates
+    //                      beforeShowDay: $.datepicker.noWeekends,
+    //                      beforeShowDay: disableDates1
+    //                  });
+    //         }if (id=="Andy"){
+    //             $( "#dateInput" ).datepicker(
+    //                 {
+    //                     dateFormat: setDateFormat,
+    //                     // no calendar before June 1rst 2020
+    //                     minDate: new Date('06/01/2020'),
+    //                     maxDate: '+4M',
+    //                     // used to disable some dates
+    //                     beforeShowDay: $.datepicker.noWeekends,
+    //                     beforeShowDay: disableDates2
+    //                 })
+    //         }
+    //         else if (id=="Jules"){
+    //             $( "#dateInput" ).datepicker(
+    //                 {
+    //                     dateFormat: setDateFormat,
+    //                     // no calendar before June 1rst 2020
+    //                     minDate: new Date('06/01/2020'),
+    //                     maxDate: '+4M',
+    //                     // used to disable some dates
+    //                     beforeShowDay: $.datepicker.noWeekends,
+    //                     beforeShowDay: disableDates3
+    //                 })
+    //         }
+    //     });
 
     // $("input[value='hairdresser']：checked").change($( "#dateInput" ).datepicker({
     //     dateFormat: setDateFormat,

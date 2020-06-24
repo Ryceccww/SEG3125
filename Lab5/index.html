@@ -236,17 +236,17 @@
                 <div id="collapseHairdresser" class="collapse" data-parent="#accordion">
                     <div class="card-body">
                         <p>You can choose a hairdresser you want here.</p>
-                        <form action="/action_page.php">
+
+                        <input class="radios" type="radio" name="hairdresser" value="" checked style="display: none"/>
+                            <input class="radios" type="radio" id="Kevin" name="hairdresser" value="Kevin" >
+                            <label for="Kevin"> Kevin(off work on Sunday and Monday )</label><br>
+                            <input class="radios" type="radio" id="Andy" name="hairdresser" value="Andy">
+                            <label for="Andy"> Andy(off work on Sunday and Saturday )</label><br>
+                            <input class="radios" type="radio" id="Jules" name="hairdresser" value="Jules">
+                            <label for="Jules"> Jules(off work on Sunday and Wednesday )</label><br><br>
 
 
-                            <input class="radios" type="radio" id="hairdresser1" name="hairdresser" value="Kevin" checked="checked">
-                            <label for="hairdresser1"> Kevin</label><br>
-                            <input class="radios" type="radio" id="hairdresser2" name="hairdresser" value="Andy">
-                            <label for="hairdresser2"> Andy</label><br>
-                            <input class="radios" type="radio" id="hairdresser3" name="hairdresser" value="Jules">
-                            <label for="hairdresser3"> Jules</label><br><br>
 
-                        </form>
                     </div>
                 </div>
             </div>
@@ -259,6 +259,8 @@
                 <div id="collapseDate" class="collapse" data-parent="#accordion">
                     <p> Please select a date</p>
                     <p>Date: <input type="text" id="dateInput"></p>
+                    <p>If you want to choose another hairdresser, please refresh the page.</p>
+                    <button type="button" onClick="location.reload()">Refresh the page</button><br>
                 </div>
 
 
