@@ -1,0 +1,45 @@
+<html lang="en-US">
+<head>
+    <title>Survey Analysis</title>
+</head>
+
+<body>
+    <h1>Survey analysis</h1>
+    <h2>1. Names</h2>
+    <ul>
+    <% for (var i=0; i<results[0].length; i++){ %>
+        <li><%= results[0][i].name %> :  <%= results[0][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>2. Goods the customers would like to buy at ShopDisney website.</h2>
+    <ul>
+    <% for (var i=0; i<results[1].length; i++){ %>
+        <li><%= results[1][i].buy %> :  <%= results[1][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>3. Things that the customers like best about the site.</h2>
+    <ul>
+    <% for (var i=0; i<results[2].length; i++){ %>
+        <li><%= results[2][i].like %> :  <%= results[2][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>4. Favourite characters</h2>
+    <ul>
+        <% for (var i=0; i<results[3].length; i++){ %>
+            <li><%= results[3][i].favourite %> :  <%= results[3][i].count %></li>
+        <% } %>
+    </ul>
+    <h2>5.Whether the customer agree that the website is good.</h2>
+    <ul>
+        <% for (var i=0; i<results[4].length; i++){ %>
+            <li><%= results[4][i].agree %> :  <%= results[4][i].count %></li>
+        <% } %>
+    </ul>
+    <h2>6. Other comments.</h2>
+    <ul>
+        <% for (var i=0; i<results[5].length; i++){ %>
+            <li><%= results[5][i].comments %> :  <%= results[5][i].count %></li>
+        <% } %>
+    </ul>
+</body>
+</html>

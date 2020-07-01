@@ -1,0 +1,94 @@
+<html>
+<head>
+    <title>Questionnaire</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+</head>
+
+<body>
+
+<div class="container-md p-3 my-3 border bg-dark text-white" id="survey">
+    <h1>Survey</h1>
+    <h2>
+        How do you like this website?
+        <a href="https://www.shopdisney.com">Go to Shop Disney</a>
+    </h2>
+    <a href="https://www.shopdisney.com" target="-_blank"
+       title="visit the website">
+        <img src="/assets/picture.png">
+    </a>
+
+    <form>
+        <h2> 1. Please enter your name: </h2>
+        <input type="text" name="name" required />
+        <br>
+        <br>
+        <h2> 2. What goods would you like to buy at ShopDisney website? </h2>
+<!--        <input type="checkbox" name="color" value="Red"> Red<br>-->
+<!--        <input type="checkbox" name="color" value="Green"> Green<br>-->
+<!--        <input type="checkbox" name="color" value="Blue"> Blue<br>-->
+        <input type="checkbox" id="buy1" name="buy" value="Clothes">
+        <label for="buy1">Clothes</label><br>
+        <input type="checkbox" id="buy2" name="buy" value="Toys">
+        <label for="buy2">Toys</label><br>
+        <input type="checkbox" id="buy4" name="buy" value="Movies">
+        <label for="buy4">Movies</label><br>
+        <br>
+        <h2>3. What do you like best about this website?</h2>
+        <input type="radio" id="like1" name="like" value="Color">
+        <label for="like1"> Color</label><br>
+        <input type="radio" id="like2" name="like" value="Design">
+        <label for="like2"> Design</label><br>
+        <input type="radio" id="like3" name="like" value="Style">
+        <label for="like3">Style</label><br>
+        <input type="radio" id="like4" name="like" value="Image">
+        <label for="like4"> Image</label><br>
+
+
+        <h2>4. Choose your favourite character from the website:</h2>
+        <select name="favourite">
+            <option value="Buzz" selected="selected">Buzz Lightyear</option>
+            <option value="Woody">Woody</option>
+            <option value="Mickey">Mickey</option>
+            <option value="Donald">Donald Duck</option>
+        </select>
+
+<!--        <h2>What is your favorite animal?</h2>-->
+<!--        I like:<br>-->
+<!--        <select name="animal">-->
+<!--            <option value="Cat" selected="selected">Cat</option>-->
+<!--            <option value="Dog">Dog</option>-->
+<!--            <option value="Turtle">Turtle</option>-->
+<!--        </select>-->
+        <br>
+        <h2>5. Do you Agree that this website is good?</h2>
+        <ul class="likert">
+            <likert> Strongly Agree </likert>
+            <likert><input type="radio" name="agree" value="1" /></likert>
+            <likert><input type="radio" name="agree" value="2" /></likert>
+            <likert><input type="radio" name="agree" value="3" /></likert>
+            <likert><input type="radio" name="agree" value="4" /></likert>
+            <likert><input type="radio" name="agree" value="5" /></likert>
+            <likert> Strongly Disagree </likert>
+        </ul>
+        <h2>6. Please write your comments below:</h2>
+        <textarea name="comments" rows="10" cols="40"></textarea>
+
+        <br>
+
+
+        <br>
+        <button type="submit" class="btn btn-warning" id="bb">Submit</button>
+        <p id="thanks"></p>
+    </form>
+</div>
+<script src="/assets/action.js"></script>
+</body>
+</html>
